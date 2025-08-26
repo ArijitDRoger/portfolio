@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@font-face{
+  font-family: 'LufgaBold';
+  src:url('./assets/LufgaBold.ttf')
+}
+
+@font-face{
+  font-family: 'LufgaMedium';
+  src:url('./assets/LufgaMedium.ttf')
+}
+
+@font-face{
+  font-family: 'LufgaRegular';
+  src:url('./assets/LufgaRegular.ttf')
+}
+
+@font-face{
+  font-family: 'Caveat-Regular';
+  src:url('./Caveat-Regular.ttf')
+}
+
+@font-face{
+  font-family: 'Caveat-Bold';
+  src:url('./Caveat-Bold.ttf')
+}
