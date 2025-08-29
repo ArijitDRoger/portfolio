@@ -21,7 +21,7 @@ const Eye = () => {
           setShowProjects(true);
         }
       },
-      { threshold: 0.5 } // visible when 50% is in view
+      { threshold: 0.7 } // visible when 70% is in view
     );
 
     if (projectRef.current) {
@@ -56,7 +56,7 @@ const Eye = () => {
           {/* Left Eye */}
           <div className="eye w-[40vh] h-[40vh] bg-gradient-to-b from-white via-gray-200 to-gray-400 rounded-full flex items-center justify-center relative">
             <div
-              className="pupil w-[15vh] h-[15vh] bg-black rounded-full flex items-center justify-center transition-transform duration-100"
+              className="pupil w-[15vh] h-[15vh] bg-black rounded-full flex items-center justify-center transition-transform duration-0"
               style={getPupilStyle(
                 window.innerWidth / 2 - 100,
                 window.innerHeight / 2 - 100
@@ -69,7 +69,7 @@ const Eye = () => {
           {/* Right Eye */}
           <div className="eye w-[40vh] h-[40vh] bg-gradient-to-b from-white via-gray-200 to-gray-400 rounded-full flex items-center justify-center relative">
             <div
-              className="pupil w-[15vh] h-[15vh] bg-black rounded-full flex items-center justify-center transition-transform duration-100"
+              className="pupil w-[15vh] h-[15vh] bg-black rounded-full flex items-center justify-center transition-transform duration-0"
               style={getPupilStyle(
                 window.innerWidth / 2 + 100,
                 window.innerHeight / 2 - 100

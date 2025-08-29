@@ -24,3 +24,28 @@
   font-family: 'Caveat-Bold';
   src:url('./Caveat-Bold.ttf')
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* slim width */
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; /* dark background to blend with site */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #12a6c7; /* your theme color */
+  border-radius: 20px;
+  border: 2px solid #0f172a; /* creates padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9; /* brighter on hover */
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #12a6c7 #0f172a;
+}

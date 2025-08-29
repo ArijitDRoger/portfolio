@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Header from "../components/Header";
 import { transform } from "motion";
+import Menu from "../components/Menu";
 
 const Page1 = () => {
   const rotateDivRef = useRef(null);
@@ -31,13 +32,17 @@ const Page1 = () => {
       }}
       className="relative perspective-[800px] h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black py-4 px-3.5 overflow-hidden"
     >
+      {/* <div className="menu absolute top-8 right-8 w-1/3 h-[91vh] rounded-2xl bg-black/70 backdrop-blur-md shadow-2xl shadow-gray-900 border border-gray-700">
+        <Menu />
+      </div> */}
+
       <div className="h-full w-full flex bg-[url('/images/ag.png')] bg-cover rounded-xl shadow-2xl shadow-gray-900">
         <div className="logo py-8 px-10">
           <h1 className="text-5xl font-bold text-white shadow-black-500 shadow-2xl">
             AG.
           </h1>
         </div>
-        <Header />
+        {/* <Header /> */}
       </div>
 
       {/* Rotating div */}
