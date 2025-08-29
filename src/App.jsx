@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollToTop from "./components/ScrollToTop";
+import MouseTracker from "./components/MaouseTracker";
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
@@ -35,6 +36,7 @@ const App = () => {
 
   return (
     <div className="app relative bg-gray-100 overflow-x-hidden">
+      <MouseTracker />
       <ScrollToTop />
       {/* Sticky Header */}
       <Header

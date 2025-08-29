@@ -2,11 +2,32 @@ import React, { useRef, useState } from "react";
 import Header from "../components/Header";
 import { transform } from "motion";
 import Menu from "../components/Menu";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const Page1 = () => {
   const rotateDivRef = useRef(null);
   const [xVal, setXVal] = useState(0);
   const [yVal, setYVal] = useState(0);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const springX = useSpring(x, { stiffness: 150, damping: 20 });
+  const springY = useSpring(y, { stiffness: 150, damping: 20 });
+
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } =
+      e.currentTarget.getBoundingClientRect();
+    const offsetX = e.clientX - (left + width / 2);
+    const offsetY = e.clientY - (top + height / 2);
+
+    x.set(offsetX * 0.15); // adjust multiplier for strength
+    y.set(offsetY * 0.15);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
 
   const mouseMoving = (e) => {
     setXVal(
@@ -37,10 +58,18 @@ const Page1 = () => {
       </div> */}
 
       <div className="h-full w-full flex bg-[url('/images/ag.png')] bg-cover rounded-xl shadow-2xl shadow-gray-900">
-        <div className="logo py-8 px-10">
-          <h1 className="text-5xl font-bold text-white shadow-black-500 shadow-2xl">
+        <div
+          className="logo relative py-8 px-10 flex "
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          style={{ width: "200px", height: "200px" }} // 👈 enlarged invisible area
+        >
+          <motion.h1
+            style={{ x: springX, y: springY }}
+            className="text-5xl font-bold text-white cursor-none"
+          >
             AG.
-          </h1>
+          </motion.h1>
         </div>
         {/* <Header /> */}
       </div>
