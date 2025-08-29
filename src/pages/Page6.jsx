@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -71,7 +72,7 @@ const Page6 = () => {
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/arijitghosh"
+          href="https://www.linkedin.com/in/arijit-ghosh-679877b3"
           target="_blank"
           rel="noreferrer"
           className="hover:text-blue-400 transition"
@@ -79,12 +80,12 @@ const Page6 = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://twitter.com/yourtwitter"
+          href="https://x.com/ArijitG97"
           target="_blank"
           rel="noreferrer"
           className="hover:text-sky-400 transition"
         >
-          <FaTwitter />
+          <FaXTwitter />
         </a>
       </motion.div>
 
