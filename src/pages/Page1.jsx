@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../components/Header";
 import { transform } from "motion";
 
@@ -6,26 +6,6 @@ const Page1 = () => {
   const rotateDivRef = useRef(null);
   const [xVal, setXVal] = useState(0);
   const [yVal, setYVal] = useState(0);
-
-  // useEffect(() => {
-  //   const handleMouseMove = (e) => {
-  //     const { innerWidth, innerHeight } = window;
-
-  //     // Mouse position relative to center
-  //     const x = (e.clientX / innerWidth - 0.5) * 80; // max 30deg rotate
-  //     const y = (e.clientY / innerHeight - 0.5) * 30;
-
-  //     if (rotateDivRef.current) {
-  //       rotateDivRef.current.style.transform = `rotateX(${-y}deg) rotateY(${x}deg)`;
-  //     }
-  //   };
-
-  //   window.addEventListener("mousemove", handleMouseMove);
-
-  //   return () => {
-  //     window.removeEventListener("mousemove", handleMouseMove);
-  //   };
-  // }, []);
 
   const mouseMoving = (e) => {
     setXVal(
