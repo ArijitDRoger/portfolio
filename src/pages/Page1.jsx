@@ -31,7 +31,7 @@ const Page1 = () => {
       }}
       className="relative perspective-[800px] h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black py-4 px-3.5 overflow-hidden"
     >
-      <div className="h-full w-full flex bg-[url('./images/ag.png')] bg-cover rounded-xl shadow-2xl shadow-gray-900">
+      <div className="h-full w-full flex bg-[url('/images/ag.png')] bg-cover rounded-xl shadow-2xl shadow-gray-900">
         <div className="logo py-8 px-10">
           <h1 className="text-5xl font-bold text-white shadow-black-500 shadow-2xl">
             AG.
